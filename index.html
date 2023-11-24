@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sagar Sir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            margin: 0;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+            font-size: 28px;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .navbar a {
+            display: inline-block;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .accordion-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .accordion {
+            background-image: url('accordian2bg.jpg');
+            opacity: 0.7;
+            cursor: pointer;
+            padding: 18px;
+            width: 80%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 28px;
+            transition: 0.4s;
+            border-radius: 12px;
+            font-family: 'Cookie', cursive;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .batches {
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <b> Physics❤️Wallah
+            <br>
+            <a href="#ln102" style="color:#26FF28;">LN 102 EA</a>
+            <a href="#yn202" style="color:#26FF28;">YN 202 MA</a>
+            <a href="#yn203" style="color:#26FF28;">YN 203 MA</a>
+        </br>
+        </b>
+    </div>
+
+    <!-- Section for LN 102 EA -->
+
+    <div class="accordion-container">
+        <h2 id="ln102" style="color:#ffffff">LN 102 EA</h2>
+        <button class="accordion" onclick="loadContentSetln102eac1()">The Solid State</button>
+        <button class="accordion" onclick="loadContentSetln102eac2()">Solution</button>
+        <button class="accordion" onclick="loadContentSetln102eac3()">Electrochemistry</button>
+        <button class="accordion" onclick="loadContentSetln102eac4()">Chemical Kinetics</button>
+        <button class="accordion" onclick="loadContentSetln102eac5()">Surface Chemistry</button>
+        <button class="accordion" onclick="loadContentSetln102eac6()">General Principles & Processes of Isolation of Elements</button>
+        <button class="accordion" onclick="loadContentSetln102eac7()">p-Block Elements</button>
+        <button class="accordion" onclick="loadContentSetln102eac8()">d&f-Block Elements</button>
+        <button class="accordion" onclick="loadContentSetln102eac9()">Co-ordination Compounds</button>
+        <button class="accordion" onclick="loadContentSetln102eac10()">Haloalkanes & Haloarenes</button>
+        <button class="accordion" onclick="loadContentSetln102eac11()">Alcohols, Phenols and Ethers</button>
+        <button class="accordion" onclick="loadContentSetln102eac12()">Aldehydes, Ketones and Carboxylic Acid</button>
+        <button class="accordion" onclick="loadContentSetln102eac13()">Organic Compounds Contaning Nitrogen</button>
+        <button class="accordion" onclick="loadContentSetln102eac14()">Biomolecules</button>
+    </div>
+
+    <!-- Section for YN 202 MA -->
+   
+    <div class="accordion-container">
+        <h2 id="yn202" style="color:#ffffff">YN 202 MA</h2>
+        <button class="accordion" onclick="loadContentSetyn202mac1()">Some Basic Concepts of Chemistry</button>
+        <button class="accordion" onclick="loadContentSetyn202mac2()">Redox Reaction</button>
+        <button class="accordion" onclick="loadContentSetyn202mac3()">Atomic Structure</button>
+        <button class="accordion" onclick="loadContentSetyn202mac4()">States of Matter</button>
+        <button class="accordion" onclick="loadContentSetyn202mac5()">Thermodynamics</button>
+        <button class="accordion" onclick="loadContentSetyn202mac6()">Equillibrium</button>
+        <button class="accordion" onclick="loadContentSetyn202mac7()">Solutions</button>
+        <button class="accordion" onclick="loadContentSetyn202mac8()">Periodic Table</button>
+        <button class="accordion" onclick="loadContentSetyn202mac9()">Chemical Bonding & Molecular Structure</button>
+        <button class="accordion" onclick="loadContentSetyn202mac10()">Chemical Kinetics</button>
+        <button class="accordion" onclick="loadContentSetyn202mac11()">Electrochemistry</button>
+        <button class="accordion" onclick="loadContentSetyn202mac12()">IUPAC Nomenclature</button>
+        <button class="accordion" onclick="loadContentSetyn202mac13()">Isomerism</button>
+        <button class="accordion" onclick="loadContentSetyn202mac14()">General Organic Chemistry</button>
+        <button class="accordion" onclick="loadContentSetyn202mac15()">Hydrocarbons</button>
+        <button class="accordion" onclick="loadContentSetyn202mac16()">Haloalkanes & Haloarenes</button>
+    </div>
+
+    <!-- Section for YN 203 MA -->
+
+    <div class="accordion-container">
+        <h2 id="yn203ma" style="color:#ffffff">YN 203 MA</h2>
+        <button class="accordion" onclick="loadContentSetyn203mac1()">Some Basic Concepts of Chemistry</button>
+        <button class="accordion" onclick="loadContentSetyn203mac2()">Redox Reaction</button>
+        <button class="accordion" onclick="loadContentSetyn203mac3()">Atomic Structure</button>
+        <button class="accordion" onclick="loadContentSetyn203mac4()">States of Matter</button>
+        <button class="accordion" onclick="loadContentSetyn203mac5()">Thermodynamics</button>
+        <button class="accordion" onclick="loadContentSetyn203mac6()">Equillibrium</button>
+        <button class="accordion" onclick="loadContentSetyn203mac7()">Solutions</button>
+        <button class="accordion" onclick="loadContentSetyn203mac8()">Periodic Table</button>
+        <button class="accordion" onclick="loadContentSetyn203mac9()">Chemical Bonding & Molecular Structure</button>
+        <button class="accordion" onclick="loadContentSetyn203mac10()">Chemical Kinetics</button>
+        <button class="accordion" onclick="loadContentSetyn203mac11()">Electrochemistry</button>
+        <button class="accordion" onclick="loadContentSetyn203mac12()">IUPAC Nomenclature</button>
+        <button class="accordion" onclick="loadContentSetyn203mac13()">Isomerism</button>
+        <button class="accordion" onclick="loadContentSetyn203mac14()">General Organic Chemistry</button>
+        <button class="accordion" onclick="loadContentSetyn203mac15()">Hydrocarbons</button>
+        <button class="accordion" onclick="loadContentSetyn203mac16()">Haloalkanes & Haloarenes</button>
+    </div>
+
+<!-- ... (script snippet) ... -->
+<script>
+
+//LN102EA
+
+    function loadContentSetln102eac1() {
+        const videoIds = ['YgPZKKzEtS4', 'VbDSZ6wIrLQ', 'OusNe3rIqs8', 'Fe8yteVgx0w', 'vkYQ4AnbMx4','kHOm4J2rLBA','6qf97xc8nms'];
+        const pdfIds = ['1RVUq2pIBpwLE94_ijQ2hiEoHoWBV0mB9', '11lOrg0_lX0jIJGi5aczjGarfOy9ejpeT', '1BVGfHZA-u2stX9M3nT4qFiCRBNB7v0yO', '1m3lrDJZYhv34coMGtepKr36csx1cNzoN','1b9s5jsooJHN3SNGKRwenM0zU-MGfLEE5','1ZwIMiMIQnK34ADpFQJlYk66xskx08waq','1XSAsdVoUsmrSUYCRW2VgZjKA83NInPCt'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac2() {
+        const videoIds = [
+            'FahvnvKK9-w', 'ofLkudLa6Eo', 'fl6i0ma5u5w', 'kXPK43bzSeA', 'lQI_IK5tFms'];
+        const pdfIds = [
+            '1gY616uTDU89AU9gth1G9vAQ0zNoKSGir', '1GZ0FIWYZn_srkUQ735U0UsK3xRM5sIhq', '1kPyP64-lbLmpReX3NTHk5jolk6NrD-Bh', '1iB1s7yklwt1FbfhA62uu4jtMDLZy-VDl', '1WNUX1-7sSrrsr99UOVpy076mjcj4nRMY'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac3() {
+        const videoIds = ['3Mrr4QdA05E', 'bguR4czAJfU', 'q61DpMFMhfc', 'oa8xyZ9IK_c', 'mNmsJrGUtEU','PmMsWSlk7Ug'];
+        const pdfIds = ['1xZcwKoApbiVtYiAYU-XrpBFKdkhbdb2e', '1mjpPGc3gnly4rvm4oSdqdCxWQXKoUZpU', '17rYCaFMNFugn8e7gdP2GpY5iIZgtbGsn', '10Hq8qYYK_AXW7rP6crUfmxtQDqZxoshL','10zUimdUFWMzG0RBXIPZx7TdzZIPzK07o','1uaMwh_cFGimLK_EhQ-4IYoiHdJAGkEoC'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac4() {
+        const videoIds = ['sbJ5rELBtd4','k3KpNBAh8WI','Qi4ru2u2KiI','9QTQ6ydRXNk','d_ds-ES2zjI','U3MsKYPD570'];
+        const pdfIds = ['1dYFvgwfk0U46-bJTM9cwrh5JzS_hXspH','1SjBG0DgPfKuJqiw8V5u6Fn6gXg-BeEkO','1DpDfO5X1DdKH1gMy4hpQEOaeiLqHZIa-','1fvUJR1McnMwnKMBvHwlRdfFuHH7RrrkH','1r-vLo0amnQ6TQS2iFoO33EqKKrpl_no0','1PXqPTIMKElqiTE9kqUcEznQzzbV5WUbn'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac5() {
+        const videoIds = ['','',''];
+        const pdfIds = ['17GET91V1MFAyHniyjD_MT_Bp4fjaQhPq','1YvEi1TmBIDfs5Ew9vwEv_FtXkJFOv7AY','17dYjcEFt-fnyb-ZTTyM3bilBnQ5fBsFE'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac6() {
+        const videoIds = ['','','',''];
+        const pdfIds = ['18q8bTFwAUGkJHQTrD3-octLo5fjEcSts','17kmuASNJiS-j4GBvG55ruEQTmnyW3nhV','1E9z-KRW38nBOSMzXj0A63s5g0vDNaQJp','17_N1qbZGQqxmZ49-k3vDi0iqTF49PYsN'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac7() {
+        const videoIds = ['','','','','','',''];
+        const pdfIds = ['1LgPJ3gbqKHfFUihRftfQ_oqhPDwi3rbA','1XefBI02iZIhfDaBbH6-kQK3SJI3nmDBF','147p84JFUR3w2pOpt5H0wOFTEWclouj7s','1Fg8tjZho2mlxBJEbENmCNePRGTo4SRCJ','1qs0Tz96m1vKYM68yXWXjtPwFLbxzmNoq','1MwSR7moSZ51Ay945PcRYS7YbOPGV01Jg','1cK2j3ofi9ek42dIc0MYnDpd8S41kGw6F'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac8() {
+        const videoIds = ['','','',''];
+        const pdfIds = ['162jhXgQ5cemMpyUnvwO7xlVkHgiafy1_','1OHr_f02vCOcAHBCT43s80LepiiLwcVdh','1d79FRg17BNsVBNiP5RhyQvcoj5N_0Pom','1ZRPzG5-1v6EIuCj65_NtTr4z7WjiYW8e'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac9() {
+        const videoIds = ['','','','','','',''];
+        const pdfIds = ['1nrxbarrQRYeC919mZhOJgNE11Kd-dy66','1QpBNoxuo2CzMV29ddyRcBZcIRhxkmqHa','1OyhnQI_A2qLskHHerbBzsfwGTuKXDWt9','1A440GkHqQgzI5HzOfkhxt_iOl34OVxG0','18IIVileRn_-0QJ585dEf3T80W2ZfdJZG','1b-hzlo1SFWqdb0SwQWZD4Sk2jUauiqJ_','1F9YfuqPSs1Xr5-iDInjmN-X6pQtWTyV2'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac10() {
+        const videoIds = ['','','','','','','','','','','',''];
+        const pdfIds = ['1LIj55w-HaR2xsO4McL9gTYjobdl-TXzJ','1YCIStKyE17Hgx10h1Qqe7QL5xCCURZUF','1r0yU7gTXfqEIvVgPAB4fDhubp2tvpkkD','1m6uy5ptU_7occzZ54bH4mXHuR0AU3Q2d','1uqn0bpVm6UXPdY6YHhCRkT88K2U6UrOw','1tkzLwfFFaTC9TnjBm3_HW89Zwj-M0EjF','1rBypJGvZUdvUZPtJrStlKuDduAp8ANeX','1j8xEyJpT9JK9VY9RgqjG0pH5KnPYZuqE','1ly3Nq-TBvPShnfMvm5GFbowgDwL8cUJX','1CvavGvTlBjM-XQF7BmoFRe3WUYSmQaWw','1KUq09T-8YGvvKQtPu4-Xt0weBR-6IXm7','1e0lj6MQCHSs8sJeuiIBArhs_GjeslLbe'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac11() {
+        const videoIds = ['','',''];
+        const pdfIds = ['125ixOyoo7IqxUfCh8VVsOfq4ygW8Xj9B','1tbVQ0tnbQ7SOZCLfW-0ycv1CQSi5bVkg','10cdCQqLRSFnvHC1PF2ftlh7Vbd3VnSXJ'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac12() {
+        const videoIds = ['','','',''];
+        const pdfIds = ['1Tr54_KTSEsuD-ZASuNCvX6bab5saRw1L','1bxcUzcpxXW9idpsA4y-h7Bs-pH5hCkaF','1MrE71bOLRPHvIUb7ProIwitES8ZYzWVe','1ddOkQmy7QUqKtrV5sqCMMjazyM6uucje'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac13() {
+        const videoIds = ['','',''];
+        const pdfIds = ['1eVCCnpAUtibALvSF-5s8pZTZA6-3IKRB','1NebCl_wVdQ7BSTZ8P2B60qwN8YZ4Dho4','1GgMXCkRE-46KYzuIRqUmWkGXvfyDDKbP'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetln102eac14() {
+        const videoIds = ['',''];
+        const pdfIds = ['1TeQqyuG4nu9Fm6MSYS9cUp5YBUTDpXrl',''];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+//YN202MA
+
+
+    function loadContentSetyn202mac1() {
+        const videoIds = ['1sy8L3UhsbQ','icFYj6B9n2Y','erO9nlzdo4s','VcPYVJDuKZs','xZNZE57TL1M','hvu2Xwls-xM','9KdEVU0ve7U'];
+        const pdfIds = ['1eoVwCBFqwUfFNbiaPFuLSSjfqXW9NoxO','1MIB_ONGdgvRq48EXfOj7K9qKn0KT5_yj','1nFaTKfBZeQip1ARGkodQJQGVmCRG4rxR','1okrbm_rt3ifJMRlpyMMOQwh07WvfPGYO','14clRk-sVPu5JvZhTEZngkqtBiMjszIyd','1SfQL7dAhpwHZzdRDR_ql36yq3OjcPmhx','10JT0fAUD93BIfKU8mQgi1RUedLzYXmX9'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac2() {
+        const videoIds = ['Vi37_sl1Kd4','ioJhXk4C86A','pKwOVdMxKaI'];
+        const pdfIds = ['1vzLODUP0FI-g6rrEh4PtEAR9m-caQK7w','1aE9ef2m5Dd73Wd4-quvZnwF3uqF6YQ0S','1py1FFceDtKneMWVFiLfRmkNiGwKYB30F'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac3() {
+        const videoIds = ['2ZnuGKc2Bhw','4yeMacZFCPI','nL9uhdvWJ8s','0ua-tHr-JO0','VsH9IiPF78s','FhcrmMs3omo','UryrCF9KJVU'];
+        const pdfIds = ['1zINf7y48fSmOyoTaJQcbfnXBcohWJCyW','1TTcFJKTUrHfJrqw09JkB9-yN0r61E-b8','1Xr2akMKhPFfhFTt03KctH1thbKUuGUgh','1SBPlE7RdbHwHoYfXJ5hAc82t3mYEKju-','18YO8VbKgPZw-IC4LrVRYS7bIxvoXKNGY','1lE_9dI_vz8rIVuzWEbVR9MOcWiEmLOZ8','1O4U_V1izvSllt5Z_3y5Q4IKBcE_7EZjN'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac4() {
+        const videoIds = ['Wa54iMpPQ5U','CP4zb1W2Idc','hXyo7iRjoRk','sKEBE2IpUow','WMSUsBFneFE'];
+        const pdfIds = ['1TcIANTDMtoMno0WtMEE58k6tRYRdWdfD','1ZNQMygFL-GMG8FYLE0fNGppYBMBHs6YX','1ocQjUK0uYXGj3nep3K6z-NRw-5BGsLKc','1GnBN4SLB7Xn59R_Goi9gquWqgliAj968','1TTLWaPp8iciQyUWpcEjZhIllgScQYUjy'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac5() {
+        const videoIds = ['z1qHNjQLc4Q','DbFNlllr__U','H7w9y9UgKZU','ytaUbdXelY0','OxvVOu7OZ7U','LggyLob7QUM'];
+        const pdfIds = ['1jPAgwYIpCTJHTAeznHSEjy7mK6QAd0at','1hePC5Pl1VLvPSmFaEX7fD3SWei0_SQuk','1SRl6pzcgu6okvrwdQhYyllaZs97OLf9j','1O5XhVZXcDkAFsdSka0sMYFcwHRDC1Dga','1hBE3vvyi6cdoQsK9Pw7EBIx_mfSz4RQy','1QrGUGGQgYw2HAh-RDLlIDtZGsSss7FSc'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac6() {
+        const videoIds = ['4EzxUpnx7H8','GBrcGOTAljc','UNmCqgYsnP4','MRISAAbWyx4','MFV2S7uis48','_uR1uy92wLw','VRTWiM6e4yU','a_N0B6gLzxs'];
+        const pdfIds = ['1sNuQrO3pfRKX68l0gMV45wUYURLNrvtZ','1Lal4F0lzSPRRfkQzB7MJiZqAawZrbv4b','1oSEeLeME1dglWa6HusPgdvgPRO4zt4dT','1w4T1mDghLpY8WdrE7Mj7eyF5pC1hS_cA','1Jn67gqeAvn8mzgM4_d8IukSGUPlTmd_v','1HDXScKnulOt2P77SQ8PIXudkwFSgVM2c','1mNSPmgcqgp50zavvBM2Hmt7ZwyugM6in','1GoeG83bQqYwekskPF9rIOdK0x9GGbTqC'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac7() {
+        const videoIds = ['O9CcAToIkTQ','CTn47c865Ss','CiwKbVXr5vQ','nQ0VMmuAjmA','avM8Ria4vIc'];
+        const pdfIds = ['1NRzQzAmYMUylDs_5NZaNVHBBFGeV_wyX','1v6dtjzUA8vIDrDr8mWl1aPbnxSSwP1-P','1jQr0UeIX8sBunqvn2jUgdr20_D8qByg-','1xNx-7Y4swrphXy0SdCsM4GQk1K5N0Vos','1DLNOzm5nYcp6IZBFyNqCmwdi8uf4sP9y'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac8() {
+        const videoIds = ['zImCfthuOaw','PItDcNSrbl4','j3ca-59sc10','uVkg3eHO9uI'];
+        const pdfIds = ['1dR4YXHGYqUlsYV63X43RrykX-Ca7KJsL','14kLCs4EWgSHIAtutMzG3--M-UN7iBIPZ','1PJicf_D7pkyw9oN_PtCfr2VbLVGoJq_H','1q0w2zu8CiwqM_uqGHInDswtX7ufnxF4y'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac9() {
+        const videoIds = ['U5ZLYmXzXFE','Rp42t0pBQTQ','52-w2luFshM','kVfgZBZVB7w','AxeRR80dL_s','87wrr4eLb_8','qpLVRNrur3U','g6shQ0NZoUM'];
+        const pdfIds = ['1VHpTgGFxHErVPO-48rCk9D3hPP8rF9Da','19P_6BL1joBPfskvEmGpiN0_1bMJfzYZ5','1x6ODAcofHNcM5eIwaU-bW8f41tFFJOn_','1A4KXUYB7zN7wdf8Mp_otFpOtmR08f4qd','18w50pVAAFycE31mNeGVWFIpxJO9l_L1o','1CvNbE0V3-WlczsSEhMMJbF66f5AiWk_K','1KQRcjs2fuDwjU9XBKiJYprOM5_Q_UkPW','1SudLVUvVGeeNBB6wa9C7f9Pu4b05IXGO'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac10() {
+        const videoIds = ['bXrDj2_N36Y','Q7CGlgxvyxc','BHbHZxwZd3w','527itUXTIs0','3wfIfjmGhik','4c_m3fofxSY'];
+        const pdfIds = ['1ExJsZ46GyKfS3GazGc1ZmBYYPfZyOXDn','15Xxb5_T_50HUkLI0JrMdUGDxh-q3h6A0','1iqvCsvwdbevly2P7O1yqwKtMYQc8BlFZ','17K9yc-kgTh_r3pMOWcm8f9eU-b5BeSQG','1VZxTZ9ivN1Cz2QG2ukCoNnaGmlHsvq6n','1Q1_hTf2p4cSJ7Fwe3VTgsW-soiySz0HH'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac11() {
+        const videoIds = ['xaYlTZRpn6Q','zcWx6fgQzHk','muuVUEf3EBk','BhHubMkdluw','W8FxUyNt2eM','2bufx78JsB8'];
+        const pdfIds = ['1e2aTAbd5d2hpMn5QCBIYJXjNpa1SlUAT','1DobTXRfPVyHSA5ZXrG7t-7FMGw2Egfg1','1DVbNhUhGO4jv8Hi6i6sIDqS6OpFz12b7','1yDajYi4d_dCGtJ0k_ZKrIEM_3CnQ9eIb','1nEfRHx3qxIINHqlitqcCSqIarFYi0wN1','1262eGDFwMSYK_3gbthDwH09olZdLcRrG'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac12() {
+        const videoIds = ['bMuilOLC8-g'];
+        const pdfIds = ['1I4C-wAYnQ4tjnxEmV-D2GVtDwI0l51_D'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac13() {
+        const videoIds = ['xmbvX81t0kM'];
+        const pdfIds = ['1m5C5hDqje0wOAd3T44aIdZudXWdnlrY0'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac14() {
+        const videoIds = ['BP6ZGZwzSzM','73El0DYtbzY','7xuMXeQi_cY','OKYQufpSZU0','X5go4IWPVjI','OeCfx7DHpf0','wQXM5b2twH0','vTR-Rx9lUlo','bWmuLVpkocQ','5tNKK_OBAxI','1_hpCm7MyrU','quu8AxaG9-I','GhUl11DSG0U','NwVw191nFmE','PnZUoBoJ3RM','SLvGM-A3s-o','BfeQU9MeEF8','xWgHEC3pS70','I9wDjhdWKTY','8sFj8K2Yl0E','ocKcEIkarjU'];
+        const pdfIds = ['13yFpHwc-5vHiXeiIBByxSbG5QusciCPG','1gXkB8jbwycO5NLRZzwu5UNGuGVmiEPIR','1y8ajubJg4owK5pbvU41aFQ_x_yLCFwPb','1VZFpS5QR4-4vZ4NFpu14DLTQVSqls_nf','1elLFukH0nSNrIxFI8Wi9Fo4Nem9V4zy-','1y4yi1sPAdrLdAe61SFBIhxLmdJCjpqQT','1MdzoFAU-taPqrtV4SYGA9cPY6SZJRyMf','1q_EAqXeA_79hjWYSzyDqaeGmX5ZnVzf3','18s2YcIQD39gqa6ZmVBRcYB5Ck0BRYqj7','1SHUSDh_TJaOUXjyChFuKDhsBX2FycQo8','15bRYhdGPKVBS-TP0YHHRwWpgXMSQO1eN','17yRAI91S2hzxWE414gxWPZ1SIFfdEL0n','1xSrUO-ni0akfE-xxnbygMjJ_vp5gogM-','1mq0lJhMf7JzuNEryrm3iG0l8fSvG0EXm','1T2ZTvqx63o0fGcJooaxz026NqiVWbj65','1LXRcpTomzKXV-kCqG8KEH8Nj0WF7u4NS','1Ex9U6Bk8iN2uzGYPSOTepTpLhLg_lHxI','1aGPAtBvIIk4g_YUjfezbaaMNjcnEB_3Q','1NKmClip6oxb0nl6JmvrxjyvBAMmcy_Xw','1aK0q3gQyoGd7LYjNh54549vH3yVQ8h73','11OqSs3SK90HF1iHxfn-YETry28f3X363'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac15() {
+        const videoIds = ['vlOEAnLvIDg','6fF5FCpcrs8','VSI4eqN5Ti4','sCe8zmEcioQ','LVlaWfTtKUk','hb2P61Bs5XQ','7BAI_vhevk0','6H1-I9ABPak','k1Q1j6wlRLg','DdD73TIeTP4','mJ_J--vUeKE','S-sMWANLIeQ'];
+        const pdfIds = ['1iv8iTRAp61uTKT_ZktHWCwBSqgTawvWU','1c4cy87C5gmHct9smNLi_B-kvcT9cRQ2g','1v3negyog5ZSEvte2bQ7RDQWWimXE4bAu','1vmkuCABMdiUB0jo08eoltVPE2XYxOjnd','1WXBR2l9Eg30Re5ai8mrmTCawEzSx8r8F','1k7OhSjB8VyYkRlE-k8ieYzqY8TDycjUr','1pgbXsRlytsBXUpfI3N9DozugrS1JqVaL','1XxkJRC-TFMOeodtopNorbs4sZuxp8YIX','10MZ-tILGKFoaeKN1RdO3aRKxlzAqzySX','16vmALcAX8H4iTx1Yx7fBpXkF1bLfrD97','1nNaWa7BkoPmMUdmOdWkz94BZOmDR-vVX','1igIEEu68nW61s2PxPKew0SwJ3aN9npOy'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn202mac16() {
+        const videoIds = ['um_Uh3qLO_8','mWWXcgOHDzQ','wLeQqttojGA','i9Bt3748ks','0EIULKqTf6w','XB9Ug0O249M','Ms8LEtETU8g','IWoaK5J-SZs'];
+        const pdfIds = ['15RjGV_uILVDSpW0UWZQA77AdmKWnAd8l','1BNRrZwazlZhFOA2CE738vA-euUOh83b4','1-tdTqC9bBXtBQCpeDx0gPWqc9KSPcuSU','1Hj5ziYaD0NaYPhwtaRv2537oqj5Rwobu','1fH08UHoMCAMrBPDMBuWlb_YX7DW4bewD','1CgWmfQ3p52pfeniQx9rL99iuSOX7fbw4','1N1SqAas8L7OCQg_cGtusMdm7Zw4-HHha','11nYtzXyLIZ5P93pW6v3uFlbOxH1QCpHX'];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+
+
+//YN203MA
+
+    function loadContentSetyn203mac1() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac2() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac4() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac5() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac6() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac7() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac8() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac9() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac10() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac11() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac12() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac13() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac14() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac15() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+    function loadContentSetyn203mac16() {
+        const videoIds = [];
+        const pdfIds = [];
+        navigateToViewport(videoIds, pdfIds);
+    }
+
+
+//fnuction caller
+function navigateToViewport(videoIds, pdfIds) {
+    const videoCount = videoIds.length;
+    const pdfCount = pdfIds.length;
+
+    // Convert the arrays to JSON strings to pass as URL parameters
+    const videoIdsParam = encodeURIComponent(JSON.stringify(videoIds));
+    const pdfIdsParam = encodeURIComponent(JSON.stringify(pdfIds));
+
+    const url = `viewport.html?videoIds=${videoIdsParam}&pdfIds=${pdfIdsParam}&videoCount=${videoCount}&pdfCount=${pdfCount}`;
+    window.location.href = url;
+}
+</script>
+<!-- ... (script snippet) ... -->
+</body>
+</html>

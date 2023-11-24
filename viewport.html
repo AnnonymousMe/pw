@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+    <style>
+body {
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            background-color: #000;
+            margin: 0;
+        }
+
+        .categories {
+            padding: 1rem 2rem;
+            border-top: 1px solid #999;
+            border-bottom: 1px solid #999;
+            background-color: #444;
+        }
+
+        .category-section {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .category {
+            margin-right: 1rem;
+            word-wrap: none;
+            white-space: nowrap;
+            border: 1px solid #CCC;
+            border-radius: 900px;
+            background-color: #E7E7E7;
+            padding: .5rem 1rem;
+            font-size: inherit;
+            cursor: pointer;
+            transition: background-color 150ms;
+        }
+
+        .category:hover {
+            background-color: #DDD;
+        }
+
+        .category.active {
+            background-color: #606060;
+            color: white;
+            border-color: #EEE;
+        }
+
+        .category:last-child {
+            margin-right: 0;
+        }
+
+        .videos {
+            background-color: #000;
+        }
+
+        .video-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 3rem 1rem;
+            padding: 3rem 0;
+            margin: 0 1.5rem;
+            border-top: 4px solid #CCC;
+        }
+
+        .video-section:first-child {
+            border-top: none;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .thumbnail {
+            position: relative;
+            display: flex;
+        }
+
+        .thumbnail::before {
+            content: attr(data-duration);
+            position: absolute;
+            background-color: rgba(0, 0, 0, .85);
+            color: white;
+            right: 5px;
+            bottom: 5px;
+            padding: .1em .3em;
+            border-radius: .3em;
+            font-size: .9rem;
+        }
+
+        .thumbnail-image {
+            width: 100%;
+            height: 100%;
+            min-width: 250px;
+            min-height: 150px;
+            background-color: #AAA;
+        }
+
+.video-iframe {
+    width: 286;
+    height: 154;
+    padding-bottom: 10%;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .video-iframe {
+        padding-bottom: 75%; /* Adjust the aspect ratio for smaller screens if needed */
+    }
+}
+
+        .pdf-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+
+        .download-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .download-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .category-section {
+                flex-direction: column;
+            }
+
+            .category {
+                margin-bottom: 0.5rem;
+            }
+
+            .video-section {
+                grid-template-columns: 1fr;
+            }
+
+            .pdf-section {
+                padding: 1rem;
+            }
+        }
+
+    </style>
+    <title>View Dock</title>
+</head>
+
+<body>
+    <div class="categories">
+        <section class="category-section">
+            <button class="category" onclick="toggleCategory('LECTURE')" data-category="LECTURE">Lecture</button>
+            <button class="category" onclick="toggleCategory('NOTES')" data-category="NOTES">Notes</button>
+        </section>
+    </div>
+    <div class="videos">
+        <section class="video-section">
+            <article class="video-container">
+                <div id="videoPlayer"></div>
+            </article>
+        </section>
+    </div>
+    <div class="pdf-section" id="pdfSection" style="display: none;">
+
+        <!-- Buttons for downloading PDF documents will be dynamically added here -->
+
+    </div>
+
+    <script>
+        function loadVideos(videoIds) {
+            const videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.innerHTML = ''; // Clear previous content
+
+            videoIds.forEach((videoId, index) => {
+                const iframe = document.createElement('iframe');
+                iframe.className = 'video-iframe';
+                iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0&`;
+                iframe.frameBorder = '0';
+                iframe.allowFullscreen = true;
+                videoPlayer.appendChild(iframe);
+            });
+
+            document.getElementById('pdfSection').style.display = 'none';
+        }
+
+        function loadDocuments(pdfIds) {
+            const pdfSection = document.getElementById('pdfSection');
+            pdfSection.innerHTML = ''; // Clear previous buttons
+
+            pdfIds.forEach((pdfId, index) => {
+                const button = document.createElement('button');
+                button.className = 'download-button';
+                button.innerHTML = `Download Document ${index + 1}`;
+                button.onclick = function () {
+                    window.open(`https://drive.google.com/uc?export=download&id=${pdfId}`, '_blank');
+                };
+                pdfSection.appendChild(button);
+            });
+
+            document.getElementById('pdfSection').style.display = 'flex';
+            document.getElementById('videoPlayer').innerHTML = ''; // Clear video player
+        }
+
+        function toggleCategory(category) {
+            const categoryButtons = document.querySelectorAll('.category');
+            categoryButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            const activeButton = document.querySelector(`[data-category="${category}"]`);
+            activeButton.classList.add('active');
+
+            const urlParams = new URLSearchParams(window.location.search);
+        const videoIdsParam = urlParams.get('videoIds');
+        const pdfIdsParam = urlParams.get('pdfIds');
+
+        // Convert the JSON strings back to arrays
+        const videoIds = JSON.parse(decodeURIComponent(videoIdsParam));
+        const pdfIds = JSON.parse(decodeURIComponent(pdfIdsParam));
+
+        // Debugging: Print the values of videoIds and pdfIds
+        console.log('videoIds:', videoIds);
+        console.log('pdfIds:', pdfIds);
+        
+
+            // Debugging: Print the values of pdfIds and videoIds
+            //console.log('pdfIds:', pdfIds);
+            //console.log('videoIds:', videoIds);
+
+            if (category === 'LECTURE') {
+                loadVideos(videoIds);
+            } else if (category === 'NOTES') {
+                loadDocuments(pdfIds);
+            }
+        }
+
+        // Initialize with the lecture section on page load
+        window.onload = function () {
+            toggleCategory('LECTURE');
+        };
+    </script>
+
+</body>
+
+</html>
