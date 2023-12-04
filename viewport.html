@@ -190,7 +190,7 @@ body {
             videoIds.forEach((videoId, index) => {
                 const iframe = document.createElement('iframe');
                 iframe.className = 'video-iframe';
-                iframe.src = `https://www.youtube.com/embed/${videoId}?rel=0&`;
+                iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&`;
                 iframe.frameBorder = '0';
                 iframe.allowFullscreen = true;
                 videoPlayer.appendChild(iframe);
