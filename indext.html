@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NEET-AIIMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            margin: 0;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+            font-size: 28px;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .navbar a {
+            display: inline-block;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .accordion-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .accordion {
+            background-image: url('accordian2bg.jpg');
+            opacity: 0.7;
+            cursor: pointer;
+            padding: 18px;
+            width: 80%;
+            border: none;
+            text-align: center;
+            text-color: #000
+            outline: none;
+            font-size: 28px;
+            transition: 0.4s;
+            border-radius: 12px;
+            font-family: 'Cookie', cursive;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .batches {
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px;
+            background-color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <b> Physics❤️Wallah
+            <br>
+            <a href="#ln" style="color:#26FF28;">Lakshya</a>
+            <a href="#yn" style="color:#26FF28;">Yakeen</a>
+            <a href="#an" style="color:#26FF28;">Arjuna</a>
+        </br>
+        </b>
+    <h3 style="font-family: cursive;">Push Update v1.0.1<h3>
+    </div>
+
+    <!-- Section for Lakshya -->
+
+    <div class="accordion-container">
+        <h2 id="ln" style="color:#ffffff">Lakshya</h2>
+        <button class="accordion" onclick="loadBatchln102ea()">LN 102 EA</button>
+        <button class="accordion" onclick="loadBatchln103ea()">LN 103 EA</button>
+    </div>
+
+    <!-- Section for Yakeen-->
+   
+    <div class="accordion-container">
+        <h2 id="yn" style="color:#ffffff">Yakeen</h2>
+                                 <!------___ma___------>
+        <h3 style="color:#864BF3">Morning</h3>
+        <button class="accordion" onclick="loadBatchyn201ma()">YN 201 MA</button>
+        <button class="accordion" onclick="loadBatchyn202ma()">YN 202 MA</button>
+        <button class="accordion" onclick="loadBatchyn203ma()">YN 203 MA</button>
+        <button class="accordion" onclick="loadBatchyn202mac4()">YN 401 MA</button>
+        <button class="accordion" onclick="loadBatchyn202mac5()">YN 501 MA</button>
+                                 <!------___ea___------>
+        <h3 style="color:#864BF3">Evening</h3>
+        <button class="accordion" onclick="loadBatchyn103ea()">YN 103 EA</button>
+        <button class="accordion" onclick="loadBatchyn201ea()">YN 201 EA</button>
+        <button class="accordion" onclick="loadBatchyn202ea()">YN 202 EA</button>
+        <button class="accordion" onclick="loadBatchyn401ea()">YN 401 EA</button>
+    </div>
+
+    <!-- Section for Arjuna -->
+
+    <div class="accordion-container">
+        <h2 id="an" style="color:#ffffff">Arjuna</h2>
+        <button class="accordion" onclick="loadBatchan103ea()">AN 103 EA</button>
+    </div>
+
+<!-- ... (script snippet) ... -->
+<script>
+
+//Lakshya
+
+    function loadBatchln102ea() {
+        const batchId = ['ln102ea'];
+        navigateToDock(batchId);
+    }
+
+//YN202MA
+    //ma
+    function loadBatchyn201ma() {
+        const batchId = ['yn201ma'];
+        navigateToDock(batchId);
+    }
+
+    function loadBatchyn202ma() {
+        const batchId = ['yn202ma'];
+        navigateToDock(batchId);
+    }
+
+
+    function loadBatchyn203ma() {
+        const batchId = ['yn203ma'];
+        navigateToDock(batchId);
+    }
+
+
+    function loadBatchyn401ma() {
+        const batchId = ['yn401ma'];
+        navigateToDock(batchId);
+    }
+
+
+    function loadBatchyn501ma() {
+        const batchId = ['yn501ma'];
+        navigateToDock(batchId);
+    }
+
+    //ea
+    function loadBatchyn103ea() {
+        const batchId = ['yn103ea'];
+        navigateToDock(batchId);
+    }
+
+
+    function loadBatchyn201ea() {
+        const batchId = ['yn201ea'];
+        navigateToDock(batchId);
+    }
+
+
+    function loadBatchyn202ea() {
+        const batchId = ['yn202ea'];
+        navigateToDock(batchId);
+    }
+
+    function loadBatchyn401ea() {
+        const batchId = ['yn401ea'];
+        navigateToDock(batchId);
+    }
+
+
+//Arjuna
+
+    function loadBatchan103ea() {
+        const batchId = ['ln103ea'];
+        navigateToDock(batchId);
+    }
+
+
+//fnuction caller
+    function navigateToDock(batchId) {
+        window.location.href = `dock.html?batchId=${batchId}`;
+    }
+}
+</script>
+<!-- ... (script snippet) ... -->
+</body>
+</html>
